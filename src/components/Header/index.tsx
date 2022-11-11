@@ -1,18 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 import Switch from "react-switch";
 
 import { DefaultTheme, ThemeContext } from "styled-components";
 
-import {
-  HeaderContainer,
-  HeaderLimit,
-  Navbar,
-  Profile,
-  ProfileData,
-  ProfileImage,
-  ProfileSubtitle,
-  ProfileTitle
-} from "./styles";
+import { Profile } from "./components/Profile";
+import { Burger, HeaderContainer, HeaderLimit, Navbar } from "./styles";
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -20,21 +14,17 @@ interface HeaderProps {
 }
 
 function Header({ toggleTheme, themeSelected }: HeaderProps) {
+  const [openNavbar, setOpenNavbar] = useState(true);
   const colors = useContext(ThemeContext);
 
   return (
     <HeaderContainer>
       <HeaderLimit>
-        <Profile>
-          <ProfileImage src="https://github.com/IvanOliver131.png" />
-          <ProfileData>
-            <ProfileTitle>Ivan Oliveira</ProfileTitle>
-            <ProfileSubtitle>
-              Fullstack Developer | React | NodeJs
-            </ProfileSubtitle>
-          </ProfileData>
-        </Profile>
-        <Navbar>
+        <Profile />
+        <Burger onClick={() => setOpenNavbar(!openNavbar)}>
+          {openNavbar ? <GiHamburgerMenu size={28} /> : <MdClose size={28} />}
+        </Burger>
+        <Navbar open={openNavbar}>
           <a href="#">Resumo</a>
           <a href="#">Ferramentas</a>
           <a href="#">Experiência</a>
@@ -48,7 +38,7 @@ function Header({ toggleTheme, themeSelected }: HeaderProps) {
             handleDiameter={25}
             height={15}
             width={40}
-            offHandleColor={colors.tertiary}
+            offHandleColor={colors.text}
             offColor={colors.secondary}
             onColor={colors.secondary}
           />

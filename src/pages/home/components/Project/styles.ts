@@ -19,11 +19,15 @@ export const ProjectsData = styled.div`
 
   gap: 0.5rem;
 
-  @media (max-width: 840px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 400px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 `;

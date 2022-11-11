@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface NavbarProps {
+  open: boolean;
+}
+
 export const HeaderContainer = styled.header`
   width: 100%;
 
@@ -20,29 +24,23 @@ export const HeaderLimit = styled.div`
   justify-content: space-between;
 `;
 
-export const Profile = styled.div`
-  display: flex;
+export const Burger = styled.div`
+  display: none;
   align-items: center;
+  z-index: 20;
 
-  gap: 1rem;
+  &:hover {
+    cursor: pointer;
+    filter: contrast(0.8);
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: end;
+  }
 `;
 
-export const ProfileImage = styled.img`
-  height: 4rem;
-
-  border-radius: 100%;
-  border: 2px solid ${(props) => props.theme.tertiary};
-`;
-
-export const ProfileData = styled.div``;
-
-export const ProfileTitle = styled.h4``;
-
-export const ProfileSubtitle = styled.span`
-  font-size: 0.8rem;
-`;
-
-export const Navbar = styled.ul`
+export const Navbar = styled.ul<NavbarProps>`
   display: flex;
   align-items: center;
 
@@ -62,11 +60,39 @@ export const Navbar = styled.ul`
     }
   }
 
-  @media (max-width: 840px) {
-    display: none;
+  @media (min-width: 481px) and (max-width: 768px) {
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    border-left: 1px solid ${(props) => props.theme.primary};
+    transform: ${({ open }) => (!open ? "translateX(0)" : "translateX(100%)")};
+    background-color: ${(props) => props.theme.background};
+
+    height: 100vh;
+    width: 300px;
+
+    padding-top: 4rem;
+    gap: 1.5rem;
   }
 
-  @media (max-width: 400px) {
-    display: none;
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    border-left: 1px solid ${(props) => props.theme.primary};
+    transform: ${({ open }) => (!open ? "translateX(0)" : "translateX(100%)")};
+    background-color: ${(props) => props.theme.background};
+
+    height: 100vh;
+    width: 260px;
+
+    padding-top: 4rem;
+    gap: 1.5rem;
   }
 `;

@@ -5,12 +5,19 @@ export const HeaderContainer = styled.header`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  padding: 1rem;
+  padding: 0.5rem 2rem;
 
   background: ${(props) => props.theme.primary};
   color: ${(props) => props.theme.text};
+`;
+
+export const HeaderLimit = styled.div`
+  width: 1400px;
+
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Profile = styled.div`

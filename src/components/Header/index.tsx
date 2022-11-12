@@ -21,7 +21,7 @@ function Header({ toggleTheme, themeSelected }: HeaderProps) {
     <HeaderContainer>
       <HeaderLimit>
         <Profile />
-        <Burger onClick={() => setOpenNavbar(!openNavbar)}>
+        <Burger open={openNavbar} onClick={() => setOpenNavbar(!openNavbar)}>
           {openNavbar ? <GiHamburgerMenu size={28} /> : <MdClose size={28} />}
         </Burger>
         <Navbar open={openNavbar}>

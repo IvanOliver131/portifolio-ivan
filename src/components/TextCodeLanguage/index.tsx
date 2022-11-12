@@ -5,7 +5,7 @@ interface TextCodeLanguageProps {
 }
 
 function TextCodeLanguage({ text }: TextCodeLanguageProps) {
-  return <TextCode>{text}</TextCode>;
+  return <TextCode>{text ? text : "Undefined"}</TextCode>;
 }
 
 export { TextCodeLanguage };

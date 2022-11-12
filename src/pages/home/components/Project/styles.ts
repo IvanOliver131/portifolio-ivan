@@ -31,3 +31,17 @@ export const ProjectsData = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+export const FooterProject = styled.footer`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0.5rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+`;

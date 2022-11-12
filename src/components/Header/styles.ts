@@ -4,6 +4,10 @@ interface NavbarProps {
   open: boolean;
 }
 
+interface BurgerProps {
+  open: boolean;
+}
+
 export const HeaderContainer = styled.header`
   width: 100%;
 
@@ -24,7 +28,7 @@ export const HeaderLimit = styled.div`
   justify-content: space-between;
 `;
 
-export const Burger = styled.div`
+export const Burger = styled.div<BurgerProps>`
   display: none;
   align-items: center;
   z-index: 20;
@@ -37,6 +41,9 @@ export const Burger = styled.div`
   @media (max-width: 768px) {
     display: flex;
     justify-content: end;
+    top: 20px;
+    right: 30px;
+    position: ${({ open }) => (!open ? "fixed" : "none")};
   }
 `;
 

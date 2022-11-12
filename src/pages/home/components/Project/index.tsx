@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { AiFillProject } from "react-icons/ai";
 
+import { Button } from "../../../../components/Button";
 import { HeaderTopic } from "../../../../components/HeaderTopic";
 import { ProjectCard } from "../../../../components/ProjectCard";
-import { ProjectsContainer, ProjectsData } from "./styles";
+import { FooterProject, ProjectsContainer, ProjectsData } from "./styles";
 
 interface ProjectProps {
   color: string;
@@ -17,6 +19,18 @@ interface ProjectGithub {
 }
 
 function Project({ color, projects }: ProjectProps) {
+  const [amountProjects, setAmountProjects] = useState(8);
+
+  function handleSeeMore() {
+    const newAmountProjects = amountProjects + 8;
+    setAmountProjects(newAmountProjects);
+  }
+
+  function handleSeeLess() {
+    const newAmountProjects = amountProjects - 8;
+    setAmountProjects(newAmountProjects);
+  }
+
   return (
     <ProjectsContainer>
       <HeaderTopic title="Projetos">
@@ -24,7 +38,7 @@ function Project({ color, projects }: ProjectProps) {
       </HeaderTopic>
 
       <ProjectsData>
-        {projects.map((project: ProjectGithub) => {
+        {projects.slice(0, amountProjects).map((project: ProjectGithub) => {
           return (
             <div key={String(project.id)}>
               <ProjectCard project={project} />
@@ -32,6 +46,14 @@ function Project({ color, projects }: ProjectProps) {
           );
         })}
       </ProjectsData>
+      <FooterProject>
+        {amountProjects > 8 && (
+          <Button onClick={handleSeeLess}>Veja menos...</Button>
+        )}
+        {amountProjects < projects.length && (
+          <Button onClick={handleSeeMore}>Veja mais...</Button>
+        )}
+      </FooterProject>
     </ProjectsContainer>
   );
 }

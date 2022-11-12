@@ -15,7 +15,7 @@ interface ContactProps {
 
 function Contact({ color }: ContactProps) {
   const [animationControl, setAnimationControl] = useState({
-    isStopped: true,
+    isStopped: false,
     isPaused: false
   });
   const ref = useRef(null);

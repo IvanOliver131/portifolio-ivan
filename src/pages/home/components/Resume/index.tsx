@@ -40,10 +40,12 @@ function Resume({ color }: ResumeProps) {
         </a>
       </span>
       <footer>
-        <Button type="submit">
-          Download CV
-          <BsCloudDownload size={20} />
-        </Button>
+        <a href="https://drive.google.com/uc?id=1bwPAhg2WD2ZU_mC9uayPjneKWDqczkG_&export=download">
+          <Button type="submit">
+            Download CV
+            <BsCloudDownload size={20} />
+          </Button>
+        </a>
       </footer>
     </ResumeContainer>
   );

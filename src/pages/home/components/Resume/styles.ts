@@ -25,4 +25,9 @@ export const ResumeContainer = styled.div`
       font-weight: 700;
     }
   }
+
+  footer {
+    display: flex;
+    justify-content: end;
+  }
 `;

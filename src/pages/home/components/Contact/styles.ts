@@ -20,7 +20,11 @@ export const ContactData = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  height: 35rem;
+  height: 30rem;
+
+  @media (min-width: 480px) and (max-width: 769px) {
+    display: none;
+  }
 
   @media (min-width: 320px) and (max-width: 480px) {
     display: none;

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
-import Lottie from "react-lottie";
+import Lottie2 from "react-lottie";
 
 import { useInView, useAnimation } from "framer-motion";
 
@@ -53,7 +53,7 @@ function Contact({ color }: ContactProps) {
 
       <ContactData>
         <ImageContainer>
-          <Lottie
+          <Lottie2
             options={defaultOptions}
             isStopped={animationControl.isStopped}
             isPaused={animationControl.isPaused}

@@ -17,6 +17,10 @@ export const FormContactContainer = styled.form`
     color: #ffffff;
   }
 
+  @media (min-width: 481px) and (max-width: 769px) {
+    width: 100%;
+  }
+
   @media (min-width: 320px) and (max-width: 480px) {
     width: 100%;
   }

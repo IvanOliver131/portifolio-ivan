@@ -21,7 +21,7 @@ export const ProjectCardContainer = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 10rem;
-    height: 5rem;
+
     white-space: nowrap;
     -webkit-line-clamp: 1; // Quantidade de linhas
   }
@@ -29,6 +29,28 @@ export const ProjectCardContainer = styled.div`
   span {
     font-weight: 600;
     color: ${(props) => props.theme.text};
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 12rem;
+
+      white-space: nowrap;
+      -webkit-line-clamp: 1; // Quantidade de linhas
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 10rem;
+
+      white-space: nowrap;
+      -webkit-line-clamp: 1; // Quantidade de linhas
+    }
   }
 `;
 

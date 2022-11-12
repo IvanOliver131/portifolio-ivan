@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import { Slot } from "@radix-ui/react-slot";
-
-export const IconContainer = styled(Slot)``;
+export const IconContainer = styled.div``;
 
 export const RootContainer = styled.div`
   display: flex;

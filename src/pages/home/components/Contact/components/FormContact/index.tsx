@@ -33,7 +33,9 @@ function FormContact() {
       <label htmlFor="name">
         <Text>Nome</Text>
         <TextInput.Root>
-          <TextInput.Icon>{/* <FaUser /> */}</TextInput.Icon>
+          <TextInput.Icon>
+            <FaUser />
+          </TextInput.Icon>
           <TextInput.Input
             id="name"
             type="text"
@@ -49,7 +51,9 @@ function FormContact() {
       <label htmlFor="e-mail">
         <Text>Email</Text>
         <TextInput.Root>
-          <TextInput.Icon>{/* <MdEmail /> */}</TextInput.Icon>
+          <TextInput.Icon>
+            <MdEmail />
+          </TextInput.Icon>
           <TextInput.Input
             id="email"
             name="email"

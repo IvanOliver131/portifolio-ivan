@@ -21,8 +21,8 @@ export const ProjectCardContainer = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 10rem;
-    white-space: no;
-
+    height: 5rem;
+    white-space: nowrap;
     -webkit-line-clamp: 1; // Quantidade de linhas
   }
 
@@ -58,7 +58,7 @@ export const FooterProjectCardContainer = styled.div`
   &:hover {
     cursor: pointer;
 
-    font-weight: 600;
+    font-weight: 500;
     border: 2px solid #cbc5ea;
 
     filter: contrast(0.8);
@@ -67,6 +67,7 @@ export const FooterProjectCardContainer = styled.div`
 
   a {
     text-decoration: none;
+    color: ${(props) => props.theme.text};
 
     &:hover {
       text-decoration: underline;

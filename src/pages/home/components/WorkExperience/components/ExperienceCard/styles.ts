@@ -6,6 +6,11 @@ export const ExperienceCardContainer = styled.div`
 
   flex-direction: column;
 
+  span {
+    color: ${(props) =>
+      props.theme.theme === "dark" ? props.theme.tertiary : props.theme.icon};
+  }
+
   footer {
     display: flex;
     align-items: center;
@@ -16,6 +21,7 @@ export const ExperienceCardContainer = styled.div`
 
     span {
       padding-bottom: 0.425rem;
+      color: ${(props) => props.theme.text};
     }
   }
 `;

@@ -29,5 +29,10 @@ export const ResumeContainer = styled.div`
   footer {
     display: flex;
     justify-content: end;
+
+    button {
+      background-color: ${(props) => props.theme.icon};
+      color: #ffffff;
+    }
   }
 `;

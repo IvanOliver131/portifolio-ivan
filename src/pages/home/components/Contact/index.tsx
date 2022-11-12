@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import Lottie from "react-lottie";
 
-import { motion, useInView, useAnimation } from "framer-motion";
+import { useInView, useAnimation } from "framer-motion";
 
 import animationData from "../../../../components/Animation/animations.json";
 import { HeaderTopic } from "../../../../components/HeaderTopic";

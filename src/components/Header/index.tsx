@@ -38,7 +38,7 @@ function Header({ toggleTheme, themeSelected }: HeaderProps) {
             handleDiameter={25}
             height={15}
             width={40}
-            offHandleColor={colors.text}
+            offHandleColor={colors.icon}
             offColor={colors.secondary}
             onColor={colors.secondary}
           />

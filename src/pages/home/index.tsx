@@ -35,12 +35,12 @@ function Home({ toggleTheme, themeSelected }: HomeProps) {
       <Header toggleTheme={toggleTheme} themeSelected={themeSelected} />
 
       <HomeContainer>
-        <SocialMedia color={colors.text} />
-        <Resume color={colors.text} />
-        <Tools color={colors.text} />
-        <WorkExperience color={colors.text} />
-        <Project color={colors.text} projects={projects} />
-        <Contact color={colors.text} />
+        <SocialMedia color={colors.iconSocialMedia} />
+        <Resume color={colors.icon} />
+        <Tools colors={colors} />
+        <WorkExperience color={colors.icon} />
+        <Project color={colors.icon} projects={projects} />
+        <Contact color={colors.icon} />
       </HomeContainer>
       <Footer />
       <ToastContainer

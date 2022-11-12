@@ -13,7 +13,8 @@ export const FormContactContainer = styled.form`
 
   button {
     width: 100%;
-    background-color: ${(props) => props.theme.primary};
+    background-color: ${(props) => props.theme.icon};
+    color: #ffffff;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {

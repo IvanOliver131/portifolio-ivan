@@ -4,7 +4,7 @@ export const ButtonStyled = styled.button`
   height: 32px;
   margin-top: 1rem;
   padding: 1.25rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   border: 1px solid ${(props) => props.theme.primary};
 
   display: flex;

@@ -56,19 +56,19 @@ function WorkExperience({ color }: WorkExperienceProps) {
           <Education>
             <ExperienceCard
               title="Universidade Federal de Itajubá"
-              job="Estudante"
+              job="Sistemas de Informação"
               city="Itajubá-MG"
               time="2017-2022"
             />
             <ExperienceCard
-              title="Técnico em controle ambiental"
-              job="Estudante"
+              title="Fundação Roge"
+              job="Técnico em Controle Ambiental"
               city="Delfim moreira-MG"
               time="2015 - 2017"
             />
             <ExperienceCard
               title="Fundação Roge"
-              job="Estudante"
+              job="Ensino Médio"
               city="Delfim moreira-MG"
               time="2015 - 2017"
             />

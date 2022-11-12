@@ -25,12 +25,17 @@ export const Actions = styled(Tabs.List)`
 `;
 
 export const ActionOption = styled(Tabs.Trigger)`
-  background-color: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.icon};
   border: none;
+
   height: 45px;
-  font-size: 16px;
   line-height: 1;
-  color: ${(props) => props.theme.text};
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
   user-select: none;
 
   &:hover {
@@ -39,7 +44,7 @@ export const ActionOption = styled(Tabs.Trigger)`
   }
 
   &[data-state="active"] {
-    border-bottom: 2px solid ${(props) => props.theme.secondary};
+    border-bottom: 3px solid ${(props) => props.theme.quartenary};
   }
 
   &:focus {

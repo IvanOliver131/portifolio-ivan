@@ -22,7 +22,7 @@ function SocialMedia({ color }: SocialMediaProps) {
         <FaFacebook color={color} />
       </a>
       <a
-        href="https://api.whatsapp.com/send/?phone=35997300157&text&type=phone_number&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=5535997300157&text&type=phone_number&app_absent=0"
         target="_blank"
       >
         <FaWhatsapp color={color} />

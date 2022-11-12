@@ -25,11 +25,11 @@ function Header({ toggleTheme, themeSelected }: HeaderProps) {
           {openNavbar ? <GiHamburgerMenu size={28} /> : <MdClose size={28} />}
         </Burger>
         <Navbar open={openNavbar}>
-          <a href="#">Resumo</a>
-          <a href="#">Ferramentas</a>
-          <a href="#">Experiência</a>
-          <a href="#">Projetos</a>
-          <a href="#">Contato</a>
+          <a href="#resume">Resumo</a>
+          <a href="#tools">Ferramentas</a>
+          <a href="#work">Experiência</a>
+          <a href="#project">Projetos</a>
+          <a href="#contact">Contato</a>
           <Switch
             onChange={toggleTheme}
             checked={themeSelected.theme === "dark" ? true : false}

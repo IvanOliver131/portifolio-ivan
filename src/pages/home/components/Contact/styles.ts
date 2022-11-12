@@ -12,3 +12,17 @@ export const ContactContainer = styled.div`
     margin-top: 0.5rem;
   }
 `;
+
+export const ContactData = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const ImageContainer = styled.div`
+  height: 35rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
+  }
+`;

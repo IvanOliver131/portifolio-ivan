@@ -8,7 +8,7 @@ interface SocialMediaProps {
 
 function SocialMedia({ color }: SocialMediaProps) {
   return (
-    <SocialMediasContainer>
+    <SocialMediasContainer id="social-media">
       <a href="https://github.com/IvanOliver131" target="_blank">
         <FaGithub color={color} />
       </a>

@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 import { DefaultTheme, ThemeContext } from "styled-components";
 
+import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Contact } from "./components/Contact";
 import { Project } from "./components/Project";
@@ -40,6 +42,19 @@ function Home({ toggleTheme, themeSelected }: HomeProps) {
         <Project color={colors.text} projects={projects} />
         <Contact color={colors.text} />
       </HomeContainer>
+      <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme={colors.theme === "dark" ? "dark" : "light"}
+      />
     </MainContainer>
   );
 }

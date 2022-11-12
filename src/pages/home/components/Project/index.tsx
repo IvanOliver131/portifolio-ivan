@@ -32,7 +32,7 @@ function Project({ color, projects }: ProjectProps) {
   }
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="project">
       <HeaderTopic title="Projetos">
         <AiFillProject size={16} color={color} />
       </HeaderTopic>

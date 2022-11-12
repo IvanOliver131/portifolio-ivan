@@ -11,7 +11,7 @@ interface ResumeProps {
 
 function Resume({ color }: ResumeProps) {
   return (
-    <ResumeContainer>
+    <ResumeContainer id="resume">
       <HeaderTopic title="Resumo">
         <FaUser size={16} color={color} />
       </HeaderTopic>

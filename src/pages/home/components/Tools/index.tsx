@@ -17,7 +17,7 @@ interface ToolsProps {
 
 function Tools({ color }: ToolsProps) {
   return (
-    <ToolsContainer>
+    <ToolsContainer id="tools">
       <HeaderTopic title="Ferramentas">
         <AiFillSetting size={16} />
       </HeaderTopic>

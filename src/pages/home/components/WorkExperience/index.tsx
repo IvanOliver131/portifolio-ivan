@@ -19,7 +19,7 @@ interface WorkExperienceProps {
 
 function WorkExperience({ color }: WorkExperienceProps) {
   return (
-    <WorkExperienceContainer>
+    <WorkExperienceContainer id="work">
       <HeaderTopic title="Experiência">
         <MdWork size={16} color={color} />
       </HeaderTopic>
@@ -64,13 +64,13 @@ function WorkExperience({ color }: WorkExperienceProps) {
               title="Técnico em controle ambiental"
               job="Estudante"
               city="Delfim moreira-MG"
-              time="2015-2017"
+              time="2015 - 2017"
             />
             <ExperienceCard
               title="Fundação Roge"
               job="Estudante"
               city="Delfim moreira-MG"
-              time="2015-2017"
+              time="2015 - 2017"
             />
           </Education>
         </ActionContent>

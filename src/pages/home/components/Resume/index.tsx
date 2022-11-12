@@ -23,13 +23,13 @@ function Resume({ color }: ResumeProps) {
         <br />
         Atualmente sou Desenvolvedor NodeJs na ZENVIA, trabalho e tenho
         experiência principalmente em NodeJs e React, estou sempre disposto e
-        ansioso para obter novos conhecimentos e experiência.
+        ansioso para obter novos conhecimentos e experiências.
         <br />
         <br />
         Obtive meu primeiro contato com a área de desenvolvimento no ensino
-        médio em 2015 e apartir dai surgiu a ideia de iniciar minha faculdade.
+        médio em 2015 e a partir daí surgiu a ideia de iniciar minha faculdade.
         Formei em Sistemas de Informação na Universidade Federal de Itajubá - MG
-        em 2022, onde vi na teoria e na pratica como são realizados os projetos
+        em 2021, onde vi na teoria e na prática como são realizados os projetos
         de forma mais completa e profissional.
         <br />
         <br />

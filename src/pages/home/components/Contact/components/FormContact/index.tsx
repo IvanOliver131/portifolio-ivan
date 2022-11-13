@@ -3,6 +3,8 @@ import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { toast } from "react-toastify";
 
+import emailjs from "@emailjs/browser";
+
 import { Button } from "../../../../../../components/Button";
 import { Text } from "../../../../../../components/Text";
 import { TextInput } from "../../../../../../components/TextInput";
@@ -15,12 +17,36 @@ function FormContact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  async function handleSendEmail(event: FormEvent) {
+    event.preventDefault();
+    try {
+      const templateParams = {
+        from_name: name,
+        message: message,
+        email: email
+      };
+
+      await emailjs
+        .send(
+          "service_l2viq9r",
+          "template_5ibd0ee",
+          templateParams,
+          "bL4L-GpXtDy1xGk-m"
+        )
+        .then();
+
+      toast.success("Mensagem enviada com sucesso!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+      toast.warning("Erro ao enviar mensagem!");
+    }
+  }
+
   return (
-    <FormContactContainer
-      action="https://formsubmit.co/ivanoliver131@gmail.com"
-      method="POST"
-      id="contactForm"
-    >
+    <FormContactContainer onSubmit={handleSendEmail}>
       <label htmlFor="name">
         <Text>Nome</Text>
         <TextInput.Root>
@@ -68,25 +94,7 @@ function FormContact() {
         />
       </label>
 
-      <input type="hidden" name="_captcha" value="true" />
-      {/* <input type="hidden" name="_next" value="http://127.0.0.1:5173" /> */}
-      <input
-        type="hidden"
-        name="_next"
-        value="https://portifolio-ivan.vercel.app"
-      />
-
-      <Button
-        type="submit"
-        // onClick={() => {
-        //   toast.success("Mensagem enviada com sucesso!");
-        //   setName("");
-        //   setEmail("");
-        //   setMessage("");
-        // }}
-      >
-        Enviar Mensagem
-      </Button>
+      <Button type="submit">Enviar Mensagem</Button>
     </FormContactContainer>
   );
 }

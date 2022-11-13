@@ -78,12 +78,12 @@ function FormContact() {
 
       <Button
         type="submit"
-        onClick={() => {
-          toast.success("Mensagem enviada com sucesso!");
-          setName("");
-          setEmail("");
-          setMessage("");
-        }}
+        // onClick={() => {
+        //   toast.success("Mensagem enviada com sucesso!");
+        //   setName("");
+        //   setEmail("");
+        //   setMessage("");
+        // }}
       >
         Enviar Mensagem
       </Button>

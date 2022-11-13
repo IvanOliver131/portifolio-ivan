@@ -15,20 +15,11 @@ function FormContact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  function handleSendMessage(event: FormEvent) {
-    event.preventDefault();
-    toast.success("Mensagem enviada com sucesso!");
-
-    setName("");
-    setEmail("");
-    setMessage("");
-  }
-
   return (
     <FormContactContainer
-      onSubmit={handleSendMessage}
       action="https://formsubmit.co/ivanoliver131@gmail.com"
       method="POST"
+      id="contactForm"
     >
       <label htmlFor="name">
         <Text>Nome</Text>
@@ -77,15 +68,25 @@ function FormContact() {
         />
       </label>
 
-      <input type="hidden" name="_captcha" value="true" />
-      <input type="hidden" name="_next" value="http://127.0.0.1:5173" />
+      <input type="hidden" name="_captcha" value="false" />
+      {/* <input type="hidden" name="_next" value="http://127.0.0.1:5173" /> */}
       <input
         type="hidden"
         name="_next"
         value="https://portifolio-ivan.vercel.app"
       />
 
-      <Button type="submit">Enviar Mensagem</Button>
+      <Button
+        type="submit"
+        onClick={() => {
+          toast.success("Mensagem enviada com sucesso!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        }}
+      >
+        Enviar Mensagem
+      </Button>
     </FormContactContainer>
   );
 }

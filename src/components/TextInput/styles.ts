@@ -27,4 +27,14 @@ export const InputContainer = styled.input`
   &::placeholder {
     color: ${(props) => props.theme.secondary};
   }
+
+  /* Cor de fundo do autocomplete */
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 30px ${(props) => props.theme.primary} inset;
+  }
+
+  /* Cor do texto do autocomplete */
+  &:-webkit-autofill {
+    -webkit-text-fill-color: ${(props) => props.theme.text} !important;
+  }
 `;

@@ -68,7 +68,7 @@ function FormContact() {
         />
       </label>
 
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_captcha" value="true" />
       {/* <input type="hidden" name="_next" value="http://127.0.0.1:5173" /> */}
       <input
         type="hidden"

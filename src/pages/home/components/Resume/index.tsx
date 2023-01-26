@@ -21,23 +21,39 @@ function Resume({ color }: ResumeProps) {
         tecnologia.
         <br />
         <br />
-        Atualmente sou Desenvolvedor NodeJs na ZENVIA, trabalho e tenho
-        experiência principalmente em NodeJs e React, estou sempre disposto e
-        ansioso para obter novos conhecimentos e experiências.
+        Graduado em Sistema de Informação, atuando a mais de um ano com
+        desenvolvimento de software com vasta experiência em Chatbot e processo
+        de retenção de usuários. No Backend tenho atuado com JavaScript,
+        utilizando o ecossistema NodeJS. Em ambiente cloud, atuando em ambiente
+        AWS, no uso de lambdas, serverless e também com versionamento de código
+        em git.
         <br />
         <br />
-        Obtive meu primeiro contato com a área de desenvolvimento no ensino
-        médio em 2015 e a partir daí surgiu a ideia de iniciar minha faculdade.
-        Formei em Sistemas de Informação na Universidade Federal de Itajubá - MG
-        em 2021, onde vi na teoria e na prática como são realizados os projetos
-        de forma mais completa e profissional.
+        Tenho pautado meus estudos no último ano voltado para boas práticas sob
+        a estrutura ímpar de single thread, paralelimos e todo imenso mundo da
+        estrutura assincrona(Bloqueante e Não Bloqueante) disponibilizado no
+        ambiente JS. Tenho atuado em projetos de largas escalas, desenvolvendo
+        Chatbot desde startups à grande cooperativas financeira no Brasil.
+        Atualmente estou responsável pelo processo de implementação de boas
+        práticas com modelagem em projeto de componentes e modelagem de
+        requisito baseado em cenários(Use Case).
+        <br />
+        <br />
+        Nos últimos anos venho ampliando ainda mais meus conhecimento,
+        principalmente no uso de ferramentas tecnológicas de cache como redis,
+        oAuth para segurança, eslint para testes lint e mocha/jest para testes
+        unitários.
+        <br />
+        <br />
+        Trabalhando em equipes diversas, no uso de metodologias ágeis Scrum e
+        XP.
         <br />
         <br />
         Sempre busco aperfeiçoar minhas habilidades e encontrar novos desafios
         para me tornar um grande profissional.
         <br />
         <br />
-        Se estiver interessado, visite meu github:
+        Se estiver interessado, visite meu github o/
         <a href="https://github.com/IvanOliver131" target="_blank">
           IvanOliver131
         </a>

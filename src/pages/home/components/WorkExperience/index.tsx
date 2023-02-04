@@ -34,6 +34,12 @@ function WorkExperience({ color }: WorkExperienceProps) {
           <WorkExperienceData>
             <ExperienceCard
               title="ZENVIA"
+              job="Frontend Developer"
+              city="São Paulo - SP"
+              time="2023"
+            />
+            <ExperienceCard
+              title="ZENVIA"
               job="NodeJS Developer"
               city="São Paulo - SP"
               time="2022"

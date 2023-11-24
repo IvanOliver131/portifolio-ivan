@@ -43,6 +43,10 @@ function FormContact() {
           toast.warning("Erro ao enviar mensagem!");
         }
       );
+
+    setName("");
+    setEmail("");
+    setMessage("");
   }
 
   return (

@@ -19,30 +19,30 @@ function FormContact() {
 
   async function handleSendEmail(event: FormEvent) {
     event.preventDefault();
-    try {
-      const templateParams = {
-        from_name: name,
-        message: message,
-        email: email
-      };
 
-      await emailjs
-        .send(
-          "service_l2viq9r",
-          "template_5ibd0ee",
-          templateParams,
-          "bL4L-GpXtDy1xGk-m"
-        )
-        .then();
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email
+    };
 
-      toast.success("Mensagem enviada com sucesso!");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      console.log(error);
-      toast.warning("Erro ao enviar mensagem!");
-    }
+    await emailjs
+      .send(
+        "service_l2viq9r",
+        "template_5ibd0ee",
+        templateParams,
+        "bL4L-GpXtDy1xGk-m"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          toast.success("Mensagem enviada com sucesso!");
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          toast.warning("Erro ao enviar mensagem!");
+        }
+      );
   }
 
   return (
